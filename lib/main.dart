@@ -32,6 +32,8 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.'
   ];
 
+  List<bool> answer = [false, true, true];
+
   int questionNumber = 0;
 
   @override
@@ -73,7 +75,7 @@ class _QuizPageState extends State<QuizPage> {
                 setState(
                   () {
                     Text('pressed');
-                    questionNumber += 1;
+                    questionNumber++;
                   },
                 );
                 //The user picked true.
@@ -97,7 +99,7 @@ class _QuizPageState extends State<QuizPage> {
                 setState(
                   () {
                     Text('pressed');
-                    questionNumber += 1;
+                    questionNumber++;
                   },
                 );
                 //The user picked false.
