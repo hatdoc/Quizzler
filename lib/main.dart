@@ -38,7 +38,11 @@ class _QuizPageState extends State<QuizPage> {
       if (quizBrain.isFinished() == true) {
         quizBrain.reset();
         scoreKeeper.clear();
-        Alert(context: context, title: "END", desc: "Quiz finished").show();
+        Alert(
+                context: context,
+                title: "Finished!",
+                desc: "You\'ve reached the end of the quiz.")
+            .show();
       } else {
         if (userPickedAnswer == correctAnswer) {
           scoreKeeper.add(Icon(
